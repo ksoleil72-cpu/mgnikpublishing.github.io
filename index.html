@@ -384,6 +384,33 @@
     border-color: var(--accent);
   }
 
+
+  .legal-note {
+    margin-top: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px 20px;
+  }
+
+  .legal-note p {
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+
+  .legal-links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .legal-links-row .btn {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+
   /* FOOTER */
   footer {
     text-align: center;
@@ -552,48 +579,29 @@
         <div class="value">MGNik Publishing</div>
       </div>
     </div>
-  </section>
 
-  <!-- PRIVACY POLICY -->
-  <section id="privacy">
-    <div class="section-label">Legal</div>
-    <h2 class="section-title">Privacy Policy</h2>
-    <div class="section-rule"></div>
-    <div class="about-text">
-      <p><strong>Effective Date: April 2026</strong></p>
-
-      <p>MGNik Publishing ("we," "us," or "our") operates the website mgnikpublishing.com and associated communications. This Privacy Policy explains how we collect, use, and protect your information.</p>
-
-      <p><strong>Information We Collect</strong><br>
-      We may collect your name, email address, and phone number when you voluntarily contact us or opt in to receive communications from us.</p>
-
-      <p><strong>SMS / Mobile Messaging</strong><br>
-      If you provide your phone number to receive SMS communications from MGNik Publishing, the following terms apply:</p>
-
-      <p>We do not share, sell, rent, or disclose SMS/mobile opt-in data, phone numbers, or message content to third parties for marketing or promotional purposes. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</p>
-
-      <p style="padding-left: 1.25rem; border-left: 2px solid var(--accent);">
-      <strong>No mobile information — including phone numbers, SMS opt-in data, and message content — will be sold, shared, rented, or disclosed to any third party or affiliate for marketing or any other purpose.</strong> This data is collected solely to facilitate direct communications between MGNik Publishing and you. Sharing of personal information with third parties for marketing purposes does not occur.
-      </p>
-
-      <p>Message frequency may vary. Message and data rates may apply. You may opt out at any time by replying <strong>STOP</strong> to any message. For help, reply <strong>HELP</strong> or contact us at <a href="mailto:dahlia@mgnikpublishing.com">dahlia@mgnikpublishing.com</a>.</p>
-
-      <p><strong>How We Use Your Information</strong><br>
-      Information you provide is used only to respond to your inquiries, send requested communications, and fulfill our obligations to you. We do not sell, trade, or transfer your personal information to outside parties.</p>
-
-      <p><strong>Data Security</strong><br>
-      We implement reasonable measures to protect your information. No method of transmission over the internet is 100% secure, but we take the protection of your data seriously.</p>
-
-      <p><strong>Contact</strong><br>
-      For privacy-related questions, contact us at <a href="mailto:dahlia@mgnikpublishing.com">dahlia@mgnikpublishing.com</a>.</p>
+    <div class="legal-note">
+      <p>For website terms, privacy information, and SMS program disclosures, use the links below. Readers who want text updates can review the public SMS signup page before opting in.</p>
+      <div class="legal-links-row">
+        <a href="sms-updates.html" class="btn">SMS Signup</a>
+        <a href="privacy.html" class="btn">Privacy Policy</a>
+        <a href="terms.html" class="btn">Terms &amp; Conditions</a>
+      </div>
     </div>
   </section>
+
 
   <footer>
     <div class="fname">Milena Nikolova</div>
     <div class="copy">&copy; 2026 All rights reserved</div>
     <div class="pub">MGNik Publishing</div>
-    <div class="pub" style="margin-top: 8px;"><a href="privacy.html" style="color: var(--text-dim); text-decoration: underline; font-size: 11px;">Privacy Policy</a></div>
+    <div class="pub" style="margin-top: 8px;">
+      <a href="privacy.html" style="color: var(--text-dim); text-decoration: underline; font-size: 11px;">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="terms.html" style="color: var(--text-dim); text-decoration: underline; font-size: 11px;">Terms &amp; Conditions</a>
+      &nbsp;|&nbsp;
+      <a href="sms-updates.html" style="color: var(--text-dim); text-decoration: underline; font-size: 11px;">SMS Signup</a>
+    </div>
   </footer>
 
 </div>
