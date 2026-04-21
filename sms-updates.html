@@ -3,210 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMS Signup — MGNik Publishing</title>
+<title>SMS Notice — MGNik Publishing</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #1a1520;
-    --bg-section: #1e1928;
-    --bg-card: rgba(32, 26, 42, 0.95);
-    --text: #f0ebe5;
-    --text-body: #d4cdc4;
-    --text-dim: #a09890;
-    --accent: #d4a96a;
-    --accent-light: #e8c48a;
-    --border: rgba(212, 169, 106, 0.18);
-  }
-
+  :root { --bg: #1a1520; --text: #f0ebe5; --text-body: #d4cdc4; --text-dim: #a09890; --accent: #d4a96a; --accent-light: #e8c48a; --border: rgba(212, 169, 106, 0.18); --bg-card: rgba(32, 26, 42, 0.95); }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
-  }
-
-  nav {
-    padding: 20px 40px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.75; }
+  nav { padding: 20px 40px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
   nav a { color: var(--accent); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; }
   nav .brand { font-family: 'Cormorant Garamond', serif; font-size: 18px; letter-spacing: 0.2em; color: var(--text); }
-
-  .container {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 60px 40px 80px;
-  }
-
-  h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
-
-  .effective { color: var(--text-dim); font-size: 13px; margin-bottom: 30px; }
-
-  p, li, label { color: var(--text-body); }
-
-  .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 28px;
-    margin-top: 24px;
-  }
-
-  .field { margin-bottom: 18px; }
-  .field label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-
-  .field input {
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    background: #16111d;
-    color: var(--text);
-    font: inherit;
-  }
-
-  .consent {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    margin: 18px 0;
-  }
-
-  .consent input {
-    margin-top: 5px;
-    width: 18px;
-    height: 18px;
-  }
-
-  .submit-btn, .text-link {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    padding: 10px 24px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: transparent;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .submit-btn:hover, .text-link:hover {
-    background: rgba(212, 169, 106, 0.1);
-    border-color: var(--accent);
-    color: var(--accent-light);
-  }
-
-  .fineprint {
-    margin-top: 18px;
-    color: var(--text-dim);
-    font-size: 14px;
-  }
-
-  .notice {
-    background: rgba(212, 169, 106, 0.07);
-    border-left: 3px solid var(--accent);
-    padding: 16px 20px;
-    margin: 20px 0 0;
-    border-radius: 0 4px 4px 0;
-  }
-
-  footer {
-    text-align: center;
-    padding: 24px;
-    border-top: 1px solid var(--border);
-    color: var(--text-dim);
-    font-size: 12px;
-  }
-
-  .legal-links {
-    margin-top: 8px;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
+  .container { max-width: 760px; margin: 0 auto; padding: 60px 40px 80px; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+  .effective { color: var(--text-dim); font-size: 13px; margin-bottom: 24px; }
+  p, li { color: var(--text-body); margin-bottom: 16px; }
+  ul { padding-left: 20px; margin-bottom: 16px; }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 28px; margin-top: 24px; }
+  .notice { background: rgba(212, 169, 106, 0.07); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 20px 0 0; border-radius: 0 4px 4px 0; }
+  footer { text-align: center; padding: 24px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 12px; }
+  .legal-links { margin-top: 8px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-
-  @media (max-width: 640px) {
-    nav, .container { padding-left: 20px; padding-right: 20px; }
-  }
+  @media (max-width: 640px) { nav, .container { padding-left: 20px; padding-right: 20px; } }
 </style>
 </head>
 <body>
-
 <nav>
   <span class="brand">MILENA NIKOLOVA</span>
   <a href="index.html">&larr; Back to Site</a>
 </nav>
-
 <div class="container">
-  <h1>SMS Signup</h1>
-  <div class="effective">Public opt-in page for MGNik Publishing text message consent</div>
+  <h1>SMS Notice</h1>
+  <div class="effective">Internal-use SMS information for MGNik Publishing</div>
 
-  <p>Use this page if you want readers to opt in to receive text messages from MGNik Publishing for author updates, book release announcements, preorder alerts, and related notices.</p>
+  <p>MGNik Publishing does not offer a public SMS signup program on this website. This page is provided only to explain how SMS messaging is handled for authorized contacts.</p>
 
   <div class="card">
-    <!-- Replace the form action below with your actual form processor or backend endpoint before publishing live. -->
-    <form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" autocomplete="name">
-      </div>
-
-      <div class="field">
-        <label for="phone">Mobile Number</label>
-        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
-      </div>
-
-      <div class="consent">
-        <input id="sms-consent" name="sms_consent" type="checkbox" value="I agree" required>
-        <label for="sms-consent">
-          I agree to receive SMS messages from MGNik Publishing about author updates, book release announcements, preorder alerts, and related notices. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. I have read the <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy.html">Privacy Policy</a>.
-        </label>
-      </div>
-
-      <button type="submit" class="submit-btn">Sign Up</button>
-    </form>
-
-    <div class="fineprint">
-      Message frequency may vary. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help.
-    </div>
+    <p><strong>Use of SMS:</strong> SMS messages are limited to internal, operational, or directly consented communications with authorized contacts.</p>
+    <p><strong>Consent:</strong> Recipients are contacted only after providing express consent through direct documented communication, internal onboarding, written consent, or another compliant non-public method maintained by the business.</p>
+    <p><strong>Message frequency:</strong> Message frequency may vary.</p>
+    <p><strong>Rates:</strong> Message and data rates may apply.</p>
+    <p><strong>Opt out:</strong> Reply <strong>STOP</strong> to opt out at any time.</p>
+    <p><strong>Help:</strong> Reply <strong>HELP</strong> for help or contact <a href="mailto:dahlia@mgnikpublishing.com">dahlia@mgnikpublishing.com</a>.</p>
+    <p><strong>Privacy:</strong> Mobile information will not be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.</p>
   </div>
 
   <div class="notice">
-    Do not publish this page with the placeholder form action still in place. Replace it with your real form endpoint or backend handler first, because fake compliance is still fake, even when it wears a blazer.
+    This page is a compliance notice, not a public subscription form. If a carrier or provider requests evidence of opt-in, the business should provide its internal consent records or screenshots of the actual non-public consent method used.
   </div>
 </div>
-
 <footer>
   <div>&copy; 2026 MGNik Publishing</div>
   <div class="legal-links">
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms &amp; Conditions</a>
-    <a href="sms-updates.html">SMS Signup</a>
+    <a href="sms-updates.html">SMS Notice</a>
   </div>
 </footer>
-
 </body>
 </html>
