@@ -65,7 +65,9 @@
     margin: 32px 0 10px;
   }
 
-  p { color: var(--text-body); margin-bottom: 16px; }
+  p, li { color: var(--text-body); margin-bottom: 16px; }
+
+  ul { padding-left: 20px; margin-bottom: 16px; }
 
   .highlight {
     background: rgba(212, 169, 106, 0.07);
@@ -75,7 +77,6 @@
     border-radius: 0 4px 4px 0;
   }
 
-  .highlight p { margin-bottom: 8px; color: var(--text); }
   .highlight p:last-child { margin-bottom: 0; }
 
   a { color: var(--accent); text-decoration: none; }
@@ -88,6 +89,18 @@
     color: var(--text-dim);
     font-size: 12px;
   }
+
+  .legal-links {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 640px) {
+    nav, .container { padding-left: 20px; padding-right: 20px; }
+  }
 </style>
 </head>
 <body>
@@ -99,36 +112,49 @@
 
 <div class="container">
   <h1>Privacy Policy</h1>
-  <div class="effective">Effective Date: April 2026 &nbsp;|&nbsp; MGNik Publishing</div>
+  <div class="effective">Effective Date: April 21, 2026 &nbsp;|&nbsp; MGNik Publishing</div>
 
-  <p>MGNik Publishing ("we," "us," or "our") operates the website mgnikpublishing.github.io and associated communications. This Privacy Policy explains how we collect, use, and protect your information.</p>
+  <p>MGNik Publishing ("we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, and protect personal information you provide through our website and communications.</p>
 
   <h2>Information We Collect</h2>
-  <p>We may collect your name, email address, and phone number when you voluntarily contact us or opt in to receive communications from us.</p>
+  <p>We may collect information you voluntarily provide to us, such as your name, email address, phone number, and any details you submit through contact forms, SMS signup forms, or direct communications.</p>
 
-  <h2>SMS / Mobile Messaging</h2>
-  <p>If you provide your phone number to receive SMS communications from MGNik Publishing, the following terms apply:</p>
+  <h2>How We Use Information</h2>
+  <p>We use information you provide to respond to inquiries, send requested updates, deliver SMS messages you expressly opted in to receive, provide customer support, and maintain our records.</p>
+
+  <h2>SMS / Mobile Messaging Privacy</h2>
+  <p>If you provide your phone number and consent to receive text messages from MGNik Publishing, the following terms apply:</p>
 
   <div class="highlight">
-    <p>We do not share, sell, rent, or disclose SMS/mobile opt-in data, phone numbers, or message content to third parties for marketing or promotional purposes.</p>
     <p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</p>
-    <p>No mobile information — including phone numbers, SMS opt-in data, and message content — will be sold, shared, rented, or disclosed to any third party or affiliate for any purpose.</p>
+    <p>Text messaging originator opt-in data and consent will not be shared with any third parties.</p>
+    <p>Message frequency may vary. Message and data rates may apply. Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help.</p>
   </div>
 
-  <p>Message frequency may vary. Message and data rates may apply. You may opt out at any time by replying <strong>STOP</strong> to any message. For help, reply <strong>HELP</strong> or contact us at <a href="mailto:dahlia@mgnikpublishing.com">dahlia@mgnikpublishing.com</a>.</p>
-
-  <h2>How We Use Your Information</h2>
-  <p>Information you provide is used only to respond to your inquiries, send requested communications, and fulfill our obligations to you. We do not sell, trade, or transfer your personal information to outside parties.</p>
+  <h2>Disclosure of Information</h2>
+  <p>We do not sell or rent your personal information. We may share information only when necessary to operate our website, deliver requested services, comply with applicable law, or protect our rights and users.</p>
 
   <h2>Data Security</h2>
-  <p>We implement reasonable measures to protect your information. No method of transmission over the internet is 100% secure, but we take the protection of your data seriously.</p>
+  <p>We use reasonable administrative, technical, and organizational safeguards to protect personal information. No method of transmission or storage is completely secure, but we take privacy seriously and work to protect the information you provide.</p>
+
+  <h2>Your Choices</h2>
+  <ul>
+    <li>You may opt out of SMS messages at any time by replying <strong>STOP</strong>.</li>
+    <li>You may request help by replying <strong>HELP</strong> or contacting us directly.</li>
+    <li>You may contact us to ask questions about how your information is used.</li>
+  </ul>
 
   <h2>Contact</h2>
-  <p>For privacy-related questions, contact us at <a href="mailto:dahlia@mgnikpublishing.com">dahlia@mgnikpublishing.com</a>.</p>
+  <p>For privacy questions, contact us at <a href="mailto:dahlia@mgnikpublishing.com">dahlia@mgnikpublishing.com</a>.</p>
 </div>
 
 <footer>
-  &copy; 2026 MGNik Publishing &nbsp;|&nbsp; All rights reserved
+  <div>&copy; 2026 MGNik Publishing</div>
+  <div class="legal-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="sms-updates.html">SMS Signup</a>
+  </div>
 </footer>
 
 </body>
