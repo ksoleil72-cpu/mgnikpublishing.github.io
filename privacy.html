@@ -8,6 +8,7 @@
 <style>
   :root {
     --bg: #1a1520;
+    --bg-card: rgba(32, 26, 42, 0.95);
     --text: #f0ebe5;
     --text-body: #d4cdc4;
     --text-dim: #a09890;
@@ -29,9 +30,95 @@
   .highlight { background: rgba(212, 169, 106, 0.07); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 16px 0; border-radius: 0 4px 4px 0; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
+
+  /* CONSENT FORM */
+  .consent-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px;
+    margin-top: 16px;
+  }
+  .consent-box p {
+    color: var(--text-body);
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+  .consent-box label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--text-body);
+    font-size: 15px;
+    line-height: 1.6;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .consent-box input[type="checkbox"] {
+    margin-top: 4px;
+    accent-color: var(--accent);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  .consent-box input[type="text"],
+  .consent-box input[type="tel"] {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    background: rgba(26, 21, 32, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+  }
+  .consent-box input[type="text"]:focus,
+  .consent-box input[type="tel"]:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .consent-box .field-label {
+    display: block;
+    color: var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .consent-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .consent-btn:hover { background: var(--accent-light); }
+  .consent-confirmation {
+    display: none;
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: rgba(212, 169, 106, 0.08);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--accent-light);
+    font-size: 15px;
+  }
+
   footer { text-align: center; padding: 24px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 12px; }
   .legal-links { margin-top: 8px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-  @media (max-width: 640px) { nav, .container { padding-left: 20px; padding-right: 20px; } }
+  @media (max-width: 640px) { nav, .container { padding-left: 20px; padding-right: 20px; } .consent-box { padding: 20px; } }
 </style>
 </head>
 <body>
@@ -52,12 +139,45 @@
   <p>We use information you provide to respond to inquiries, provide requested services, maintain internal records, and send SMS messages only to authorized contacts who have provided consent to receive them.</p>
 
   <h2>SMS / Mobile Messaging Privacy</h2>
-  <p>MGNik Publishing does not operate a public SMS subscription program for readers through this website. Any SMS communications are limited to authorized contacts who have provided consent through internal, direct, or documented consent methods.</p>
+  <p>MGNik Publishing uses SMS messaging on a limited basis for direct, low-volume communication with the business owner and authorized contacts only. This is not a public subscription service. For our complete SMS policy, see our <a href="sms-updates.html">SMS Notice</a>.</p>
+
+  <p>Authorized contacts may receive the following types of SMS messages:</p>
+  <ul>
+    <li>Scheduling reminders and shift updates</li>
+    <li>Operational status alerts</li>
+    <li>Project and workflow updates</li>
+    <li>General business-related communication</li>
+  </ul>
+  <p>Messages are not used for marketing, advertising, or promotional purposes.</p>
 
   <div class="highlight">
     <p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</p>
     <p>Text messaging originator opt-in data and consent will not be shared with any third parties.</p>
-    <p>Message frequency may vary. Message and data rates may apply. Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help.</p>
+    <p>Message frequency varies. Typical usage is 1–3 messages per day (max 10/day). Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help.</p>
+  </div>
+
+  <h2>Authorized Contact — SMS Consent</h2>
+  <p>Authorized contacts must provide consent below before receiving SMS messages from MGNik Publishing.</p>
+
+  <div class="consent-box">
+    <p>By providing your mobile phone number and checking the box below, you consent to receive SMS messages from MGNik Publishing related to internal operational communications, including scheduling reminders, status alerts, project updates, and general business communication. Message frequency varies; typical usage is 1–3 messages per day (max 10/day). Message and data rates may apply. Reply STOP to opt out at any time. Reply HELP for help. Mobile information will not be shared with third parties for marketing purposes.</p>
+
+    <span class="field-label">Full Name</span>
+    <input type="text" id="consent-name" placeholder="Your full name" autocomplete="name">
+
+    <span class="field-label">Mobile Phone Number</span>
+    <input type="tel" id="consent-phone" placeholder="(555) 555-5555" autocomplete="tel">
+
+    <label>
+      <input type="checkbox" id="consent-check">
+      <span>I agree to receive SMS messages from MGNik Publishing as described above. I understand I can reply STOP at any time to opt out.</span>
+    </label>
+
+    <button class="consent-btn" onclick="submitConsent()">Submit Consent</button>
+
+    <div class="consent-confirmation" id="consent-confirm">
+      Thank you. Your consent has been recorded. You may reply STOP to any message at any time to opt out.
+    </div>
   </div>
 
   <h2>Disclosure of Information</h2>
@@ -84,5 +204,23 @@
     <a href="sms-updates.html">SMS Notice</a>
   </div>
 </footer>
+
+<script>
+function submitConsent() {
+  var name = document.getElementById('consent-name').value.trim();
+  var phone = document.getElementById('consent-phone').value.trim();
+  var checked = document.getElementById('consent-check').checked;
+
+  if (!name || !phone || !checked) {
+    alert('Please fill in your name, phone number, and check the consent box.');
+    return;
+  }
+
+  document.getElementById('consent-confirm').style.display = 'block';
+  document.querySelector('.consent-btn').textContent = 'Consent Recorded';
+  document.querySelector('.consent-btn').disabled = true;
+  document.querySelector('.consent-btn').style.opacity = '0.6';
+}
+</script>
 </body>
 </html>
